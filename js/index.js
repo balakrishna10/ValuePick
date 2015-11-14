@@ -55,7 +55,7 @@ $(window).scroll(function () {
 			            console.log('resLen',resLen);
 			            var data = { resultData:log_data, length: resLen};
 			             console.log('data',data);
-			            var tpl = _.template($('#titleDetail').html());
+			            var tpl = _.template($('#titleDetail2').html());
 			    		$('#blog').append(tpl(data));
 			    	    hideLoading();
 			    		var size= localStorage.getItem('size');
