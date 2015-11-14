@@ -12,6 +12,12 @@ function onDeviceReady() {
             alert('success');
             console.log('GET log_data',log_data);
             console.log('GET status',status);
+            var resLen=log_data.length;
+            console.log('resLen',resLen);
+            var data = { resultData:log_data, length: resLen};
+             console.log('data',data);
+            var tpl = _.template($('#titleDetail').html());
+    		$('#blog').append(tpl(data));
         },
         error: function(e) {
             console.log(e);

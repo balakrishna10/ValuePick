@@ -34,20 +34,9 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Hello World</title>
         <script type="text/template" id="titleDetail">
-
-        </script>
-
-    </head>
-    <body>
-        <div class="wrapper">
-            <header>
-                <div>
-                    Valuepicks
-                </div>
-            </header>
-            <div id="blog">
-                 <section class="blog-details">
-                    <div class="blog-content">
+            <section class="blog-details">
+                <div class="blog-content">
+                    <% for(var i=0; i<length; i++) {%>
                         <div class="blog-title text-center">
                             Title
                         </div>
@@ -64,8 +53,28 @@
                                 <p class="inline-middle"><span>Date</span></p>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    <% }; %>
+                </div>
+            </section>
+        </script>
+
+        <% for(var i=0; i<length; i++) {%>
+            <tr>
+                <td id="td100<%= i %>"><%= resultData.item(i).chassisno %></td>
+                <td><input type="checkbox" id="<%= i %>" name="select_for_chessisno[]" class="select_for_chessisno"/></td>
+            </tr>
+       <% }; %>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div>
+                    Valuepicks
+                </div>
+            </header>
+            <div id="blog">
+                
             </div>
        </div>
         <script type="text/javascript" src="cordova.js"></script>
