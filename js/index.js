@@ -54,6 +54,7 @@ $(window).scroll(function () {
 			             console.log('data',data);
 			            var tpl = _.template($('#titleDetail').html());
 			    		$('#blog').append(tpl(data));
+			    		var size= localStorage.getItem('size');
 			    		size=parseInt(size)+10;
     					localStorage.setItem('size', size);
 		        	}else{
@@ -78,6 +79,9 @@ $(window).scroll(function () {
 						             console.log('data',data);
 						            var tpl = _.template($('#titleDetail').html());
 						    		$('#blog').append(tpl(data));
+						    		var size= localStorage.getItem('size');
+						    		size=parseInt(size)+10;
+			    					localStorage.setItem('size', size);
 					        	// }else{
 					        		
 					        	// }
