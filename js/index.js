@@ -119,3 +119,11 @@ function showLoading() {
 function hideLoading() {
     $("#loading").hide();
 }
+
+$(document).on('click','.blog-title', function(){
+   var titleId=$(this).attr('id');
+   localStorage.setItem('titleId',titleId);
+   console.log('titleId',titleId);
+   window.location = "blog.html";
+  
+});

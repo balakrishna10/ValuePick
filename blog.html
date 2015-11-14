@@ -33,8 +33,37 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Blog</title>
-        <script type="text/template" id="titleDetail">
+        <script type="text/template" id="blogDetail">
 
+            <div class="blog-title text-center headings">
+                    <%=  resultData.title %>
+            </div>
+            <div class="blog-summary">
+                <p>
+                     <%=  resultData.content %>
+                </p>
+            </div>
+            <div class="blog-footer">
+                <div>
+                    <p class="inline-middle"><span>Author: </span><span><%=  resultData.author %></span></p>
+                    <p class="inline-middle"><span>Date:</span><span><%=  new Date(resultData.lastModified) %></span></p>
+                </div>
+                <section class="comment-sec">
+                    <p class="headings">Comments</p>
+                    <% for(var i=0; i<resultData.comments.length; i++) {%>
+                        <div class="comments">
+                            <div class="comment-header">
+                              <p class="inline-middle">Commented by: <%=  resultData.comments[i].user %></p>
+                              <p class="inline-middle">Date: <%=  new Date(resultData.comments[i].commentDate) %></p>
+                            </div>
+                            <div class="comment-content">
+                               <%= resultData.comments[i].comment %>
+                            </div>
+                            <br>
+                        </div>
+                    <% }; %>     
+                </section>
+            </div>
         </script>
 
     </head>
@@ -46,6 +75,7 @@
                 </div>
             </header>
             <div class="blog-page">
+<<<<<<< HEAD
                 <div class="blog-title text-center headings">
                     Title
                 </div>
@@ -72,6 +102,9 @@
                         </div>
                     </section>
                 </div>
+=======
+               
+>>>>>>> 28072b3e47190c15df0ed64076aa5cda193f63d8
             </div>
         </div>
         <div id="loading" class="text-center">
@@ -82,6 +115,6 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/underscore.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/blog.js"></script>
     </body>
 </html>
