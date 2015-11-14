@@ -24,7 +24,7 @@
                                 </p>
                                 <div>
                                     <p class="inline-middle"><span class="headings">Comments : </span><span><%= resultData[i].commentCount %></span></p>
-                                    <p class="inline-middle"><span class="headings">Date :  </span><span><%= new Date(resultData[i].lastModified) %></span></p>
+                                    <p class="inline-middle"><span class="headings">Date :  </span><span><%= new Date(resultData[i].lastModified).getDay() %>-<%= new Date(resultData[i].lastModified).getMonth()+1 %>-<%= new Date(resultData[i].lastModified).getFullYear() %>&nbsp;<%= new Date(resultData[i].lastModified).getHours() %>:<%= new Date(resultData[i].lastModified).getMinutes() %></span></p>
                                 </div>
                             </div>
                     </div>

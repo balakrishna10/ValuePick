@@ -27,7 +27,7 @@
                         <div class="comments">
                             <div class="comment-header">
                               <p class="inline-middle"><span class="color-green">Commented by: </span><span><%=  resultData.comments[i].user %></span></p>
-                              <p class="inline-middle"><span class="color-green">Date: </span><span><%=  new Date(resultData.comments[i].commentDate) %></span></p>
+                              <p class="inline-middle"><span class="color-green">Date: </span><span><%= new Date(resultData.comments[i].commentDate).getDay() %>-<%= new Date(resultData.comments[i].commentDate).getMonth()+1 %>-<%= new Date(resultData.comments[i].commentDate).getFullYear() %>&nbsp;<%= new Date(resultData.comments[i].commentDate).getHours() %>:<%= new Date(resultData.comments[i].commentDate).getMinutes() %></span></p>
                             </div>
                             <div class="comment-content">
                                <%= resultData.comments[i].comment %>
