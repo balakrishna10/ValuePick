@@ -41,16 +41,16 @@
                                <%=  resultData[i].title %>
                             </div>
                             <div class="blog-summary">
-                                <p>Summary</p>
+                                <p class="headings">Summary</p>
                                 <p>
                                     <%= resultData[i].summary20 %>
                                 </p>
                             </div>
                             <div class="blog-footer">
-                                <p><span>Author &nbsp;&nbsp;&nbsp;&nbsp; <%= resultData[i].author %></span></p>
+                                <p><span>Author: &nbsp;&nbsp;&nbsp;&nbsp; <%= resultData[i].author %></span></p>
                                 <div>
-                                    <p class="inline-middle"><span>CommentsNumber <%= resultData[i].commentCount %></span></p>
-                                    <p class="inline-middle"><span>Date <%= resultData[i].lastModified %></span></p>
+                                    <p class="inline-middle"><span>Comments: <%= resultData[i].commentCount %></span></p>
+                                    <p class="inline-middle"><span>Date: <%= resultData[i].lastModified %></span></p>
                                 </div>
                             </div>
                     </div>

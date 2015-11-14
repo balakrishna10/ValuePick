@@ -25,7 +25,7 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:14px;
     /*height:100%;*/
     margin:0px;
     padding:0px;
@@ -62,6 +62,11 @@ header div{
     border-radius: 5px;
     padding: 5px;
 }
+.blog-title{
+    font-size: 16px;
+    padding: 5px 0;
+    background-color: #a4a4a4;
+}
 .blog-content{
     
 }
@@ -96,8 +101,9 @@ header div{
     width: 100%;
     font-size: 12px;
     z-index: 500001;
-    background: url(img/loader.gif) no-repeat 50%;
+    background: url('../img/loader.gif') no-repeat 48%;
     margin-top: -46px;
+    background-size: 50px 50px;
 }
 
 #loading div.bg{
