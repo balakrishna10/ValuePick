@@ -41,7 +41,7 @@
                                <%=  resultData[i].title %>
                             </div>
                             <div class="blog-summary">
-                                <p>Summary</p>
+                                <p class="headings">Summary</p>
                                 <p>
                                     <%= resultData[i].summary20 %>
                                 </p>
@@ -51,6 +51,10 @@
                                 <div>
                                     <p class="inline-middle"><span>CommentsNumber : <%= resultData[i].commentCount %></span></p>
                                     <p class="inline-middle"><span>Date : <%= new Date(resultData[i].lastModified) %></span></p>
+                                <p><span class="headings">Author: &nbsp;&nbsp;&nbsp;&nbsp;</span><span> <%= resultData[i].author %></span></p>
+                                <div>
+                                    <p class="inline-middle" style="margin-top:0;"><span class="headings">Comments: </span><span><%= resultData[i].commentCount %></span></p>
+                                    <p class="inline-middle" style="margin-top:0;"><span class="headings">Date:</span><span> <%= resultData[i].lastModified %></span></p>
                                 </div>
                             </div>
                     </div>
