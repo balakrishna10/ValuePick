@@ -53,15 +53,20 @@ header div{
     padding: 15px 0;
 }
 .blog-details{
-    padding: 10px;
-}
-.blog-content{
-    padding: 5px;
+    margin:10px;
     background-color: #eee;
     box-shadow: 0 0 5px #333;
     border-radius: 5px;
+    padding: 5px;
+}
+.blog-content{
+    
 }
 .blog-content .inline-middle{
     width: 48%;
+}
+
+.blog-page{
+    padding: 10px;
 }
 
