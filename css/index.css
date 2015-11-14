@@ -40,6 +40,9 @@ body {
     display: inline-block;
     vertical-align: middle;
 }
+.headings{
+    font-size: 16px;
+}
 p{
     /*margin: 0;*/
 }
@@ -62,11 +65,15 @@ header div{
 .blog-content{
     
 }
-.blog-content .inline-middle{
+.blog-footer  .inline-middle{
     width: 48%;
 }
 
 .blog-page{
     padding: 10px;
 }
+.comments{
+    padding-left: 15px;
+}
+
 
