@@ -34,28 +34,28 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Hello World</title>
         <script type="text/template" id="titleDetail">
-            <section class="blog-details">
-                <div class="blog-content">
-                    <% for(var i=0; i<length; i++) {%>
-                        <div class="blog-title text-center">
-                            Title
-                        </div>
-                        <div class="blog-summary">
-                            <p>Summary</p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nihil voluptate doloribus voluptates cupiditate laudantium facere, modi omnis ipsum odio corporis fugiat laborum, facilis officia natus aliquid aperiam tenetur, tempore!
-                            </p>
-                        </div>
-                        <div class="blog-footer">
-                            <p><span>Author</span></p>
-                            <div>
-                                <p class="inline-middle"><span>Comments</span></p>
-                                <p class="inline-middle"><span>Date</span></p>
+            <% for(var i=0; i<length; i++) {%>
+                <section class="blog-details">
+                    <div class="blog-content">
+                            <div class="blog-title text-center">
+                               <%=  resultData[i].title %>
                             </div>
-                        </div>
-                    <% }; %>
-                </div>
-            </section>
+                            <div class="blog-summary">
+                                <p>Summary</p>
+                                <p>
+                                    <%= resultData[i].summary20 %>
+                                </p>
+                            </div>
+                            <div class="blog-footer">
+                                <p><span>Author &nbsp;&nbsp;&nbsp;&nbsp; <%= resultData[i].author %></span></p>
+                                <div>
+                                    <p class="inline-middle"><span>CommentsNumber <%= resultData[i].commentCount %></span></p>
+                                    <p class="inline-middle"><span>Date <%= resultData[i].lastModified %></span></p>
+                                </div>
+                            </div>
+                    </div>
+                </section>
+            <% }; %>
         </script>
 
     </head>
