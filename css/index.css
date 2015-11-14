@@ -27,6 +27,9 @@ body {
     font-size: 16px;
     color: blue;
 }
+.color-green{
+    color: #01DF01;
+}
 p{
     margin: 5px 0;
 }

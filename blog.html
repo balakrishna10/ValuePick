@@ -18,16 +18,16 @@
             </div>
             <div class="blog-footer">
                 <div>
-                    <p class="inline-middle"><span>Author: </span><span><%=  resultData.author %></span></p>
-                    <p class="inline-middle"><span>Date:</span><span><%=  new Date(resultData.lastModified) %></span></p>
+                    <p class="inline-middle"><span class="headings">Author: </span><span><%=  resultData.author %></span></p>
+                    <p class="inline-middle"><span class="headings">Date:</span><span><%=  new Date(resultData.lastModified) %></span></p>
                 </div>
                 <section class="comment-sec">
                     <p class="headings">Comments</p>
                     <% for(var i=0; i<resultData.comments.length; i++) {%>
                         <div class="comments">
                             <div class="comment-header">
-                              <p class="inline-middle">Commented by: <%=  resultData.comments[i].user %></p>
-                              <p class="inline-middle">Date: <%=  new Date(resultData.comments[i].commentDate) %></p>
+                              <p class="inline-middle"><span class="color-green">Commented by: </span><span><%=  resultData.comments[i].user %></span></p>
+                              <p class="inline-middle"><span class="color-green">Date: </span><span><%=  new Date(resultData.comments[i].commentDate) %></span></p>
                             </div>
                             <div class="comment-content">
                                <%= resultData.comments[i].comment %>
