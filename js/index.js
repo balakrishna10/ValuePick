@@ -20,7 +20,7 @@ function onDeviceReady() {
             var resLen=log_data.length;
             console.log('resLen',resLen);
             var data = { resultData:log_data, length: resLen};
-             console.log('data',data);
+            console.log('data',data);
             var tpl = _.template($('#titleDetail').html());
     		$('#blog').append(tpl(data));
     		hideLoading();
@@ -109,3 +109,13 @@ $(window).scroll(function () {
 		    });  
         }
 });
+
+
+
+function showLoading() {
+    $("#loading").show();
+}
+
+function hideLoading() {
+    $("#loading").hide();
+}
