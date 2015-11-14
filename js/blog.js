@@ -2,7 +2,6 @@ $(function() {
     document.addEventListener("deviceready", onDeviceReady, true);
 });
 function onDeviceReady() {
-    alert('in onDeviceReady');
     var titleId= localStorage.getItem('titleId');
     console.log('titleId',titleId);
     showLoading();
@@ -23,7 +22,6 @@ function onDeviceReady() {
             return false;
         }
     });  
-   
 }
 
 function showLoading() {
