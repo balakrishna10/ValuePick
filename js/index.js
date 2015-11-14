@@ -2,18 +2,19 @@ $(function() {
     document.addEventListener("deviceready", onDeviceReady, true);
 });
 function onDeviceReady() {
-    alert('in onDeviceReady');
+    // alert('in onDeviceReady');
     console.log('in onDeviceReady');
     localStorage.setItem('size', 10);
     localStorage.setItem('pageNumber', 0);
     var size= localStorage.getItem('size');
     var page= localStorage.getItem('pageNumber');
+    showLoading();
     $.ajax({
         type: 'GET',
         url: 'http://52.26.182.191:9000/scrap/blog/recent?page='+page+'&size='+size,
         dataType: 'json',
         success: function(log_data, status) {
-            alert('success');
+            // alert('success');
             console.log('GET log_data',log_data);
             console.log('GET status',status);
             var resLen=log_data.length;
@@ -22,6 +23,7 @@ function onDeviceReady() {
              console.log('data',data);
             var tpl = _.template($('#titleDetail').html());
     		$('#blog').append(tpl(data));
+    		hideLoading();
     		size=parseInt(size)+10;
     		localStorage.setItem('size', size);
         },
@@ -39,13 +41,14 @@ $(window).scroll(function () {
         if ($(window).height() + $(window).scrollTop() == $(document).height()) {
         	var page= localStorage.getItem('pageNumber');
         	var size= localStorage.getItem('size');
+        	showLoading();
             $.ajax({
 		        type: 'GET',
 		        url: 'http://52.26.182.191:9000/scrap/blog/recent?page='+page+'&size='+size,
 		        dataType: 'json',
 		        success: function(log_data, status) {
 		        	if(log_data.length>0){
-		        		alert('success');
+		        		// alert('success');
 			            console.log('GET log_data',log_data);
 			            console.log('GET status',status);
 			            var resLen=log_data.length;
@@ -54,6 +57,7 @@ $(window).scroll(function () {
 			             console.log('data',data);
 			            var tpl = _.template($('#titleDetail').html());
 			    		$('#blog').append(tpl(data));
+			    	    hideLoading();
 			    		var size= localStorage.getItem('size');
 			    		size=parseInt(size)+10;
     					localStorage.setItem('size', size);
@@ -64,13 +68,14 @@ $(window).scroll(function () {
     					localStorage.setItem('pageNumber', page);
     					localStorage.setItem('size', 10);
     					var size=localStorage.getItem('size');
+    					showLoading();
 		        		$.ajax({
 					        type: 'GET',
 					        url: 'http://52.26.182.191:9000/scrap/blog/recent?page='+page+'&size='+size,
 					        dataType: 'json',
 					        success: function(log_data, status) {
 					        	// if(log_data.length>0){
-					        		alert('success');
+					        		// alert('success');
 						            console.log('GET log_data',log_data);
 						            console.log('GET status',status);
 						            var resLen=log_data.length;
@@ -79,6 +84,7 @@ $(window).scroll(function () {
 						             console.log('data',data);
 						            var tpl = _.template($('#titleDetail').html());
 						    		$('#blog').append(tpl(data));
+						    		hideLoading();
 						    		var size= localStorage.getItem('size');
 						    		size=parseInt(size)+10;
 			    					localStorage.setItem('size', size);
